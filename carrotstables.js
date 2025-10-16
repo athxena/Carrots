@@ -78,3 +78,29 @@ console.log(horseOneHungryMessage);
 console.log(horseTwoHungryMessage);
 console.log(horseThreeHungryMessage);
 console.log(horseFourHungryMessage);
+
+let totalStalls = 6;
+
+function stallsAvailable() {
+    let available = totalStalls - horses.length;
+    console.log("Stalls available: " + available);
+}
+
+stallsAvailable();
+
+function latePaymentOwed(horse, monthlyFee) {
+    let amountOwed = monthlyFee * 1.2;
+    console.log(horse + " owes $" + amountOwed + " if rent is paid late.");
+}
+
+latePaymentOwed(horseOne.name, horseOne.monthlyBoardingFee);
+latePaymentOwed(horseTwo.name, horseTwo.monthlyBoardingFee);
+latePaymentOwed(horseThree.name, horseThree.monthlyBoardingFee);
+latePaymentOwed(horseFour.name, horseFour.monthlyBoardingFee);
+
+function getHorseNickname(horse) {
+    return horse.nickname;
+}
+
+let chosenHorseNickname = getHorseNickname(horseThree);
+console.log("The chosen horse's nickname is: " + chosenHorseNickname);
